@@ -16,7 +16,6 @@ if(!config.get==="jwtPrivateKey"){
 
 const PORT=3002;
 require('./startup/routes')(app)
-app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.listen(PORT, () => {
