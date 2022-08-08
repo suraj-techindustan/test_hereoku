@@ -3,7 +3,9 @@ const { default: mongoose } = require('mongoose');
 const app=express();
 const config =require('config')
 
-mongoose.connect('mongodb://localhost:27017/myapp')
+const dB="mongodb+srv://Suraj:Asdf071@firstcluster.ogf34.mongodb.net/myAPP?retryWrites=true&w=majority"
+
+mongoose.connect(dB)
 .then(()=>{console.log('connected ')})
 .catch((err)=>{console.log('not connected',err)})
 
